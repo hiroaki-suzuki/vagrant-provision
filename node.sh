@@ -3,7 +3,7 @@
 . /vagrant/variables.sh
 
 # npm
-sudo yum install -y npm
+sudo yum install -y --enablerepo=epel npm
 
 # nodejs
 sudo yum install -y --enablerepo=epel nodejs
