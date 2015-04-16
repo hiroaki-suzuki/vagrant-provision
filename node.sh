@@ -2,6 +2,8 @@
 
 . /vagrant/variables.sh
 
+mkdir /vagrant/src
+
 # npm
 sudo yum install -y --enablerepo=epel npm
 
@@ -10,7 +12,11 @@ sudo yum install -y --enablerepo=epel nodejs
 
 # less
 sudo npm install -g less
-mkdir /vagrant/less
+mkdir /vagrant/src/less
+
+# jade
+sudo npm install -g jade
+mkdir /vagrant/src/jade
 
 # Grunt
 sudo npm install -g grunt-cli
