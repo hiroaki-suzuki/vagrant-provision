@@ -3,7 +3,7 @@
 . /vagrant/variables.sh
 
 #　日本語環境設定
-# yum -y groupinstall "Japanese Support"
+yum -y groupinstall "Japanese Support"
 
 cp -p /etc/sysconfig/i18n /home/vagrant/bk/i18n.org
 sed -i -e "s/LANG=.*$/LANG=\"ja_JP.UTF-8\"/g" /etc/sysconfig/i18n
@@ -23,5 +23,5 @@ sed -i -e "s/server 1.*$/server -4 ntp1.jst.mfeed.ad.jp/g" /etc/ntp.conf
 sed -i -e "s/server 2.*$/server -4 ntp2.jst.mfeed.ad.jp/g" /etc/ntp.conf
 sed -i -e "s/server 3.*$/server -4 ntp3.jst.mfeed.ad.jp/g" /etc/ntp.conf
 
-service ntp start
+service ntpd start
 chkconfig ntpd on
